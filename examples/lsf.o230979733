@@ -1,0 +1,182 @@
+Sender: LSF System <lsfadmin@eu-g3-076>
+Subject: Job 230979733: <python cifar.py --epsilon 0.28235294117 --model resnet --resnet_N 1 --resnet_factor 1 --epochs 60 --starting_epsilon=0.001 --verbose 200 --prefix tmp/cifar --cascade 1 --norm_test l2_normal --norm_train l2_normal --proj 50> in cluster <euler> Exited
+
+Job <python cifar.py --epsilon 0.28235294117 --model resnet --resnet_N 1 --resnet_factor 1 --epochs 60 --starting_epsilon=0.001 --verbose 200 --prefix tmp/cifar --cascade 1 --norm_test l2_normal --norm_train l2_normal --proj 50> was submitted from host <eu-login-38> by user <pdebartol> in cluster <euler> at Tue Sep  6 19:32:31 2022
+Job was executed on host(s) <16*eu-g3-076>, in queue <gpuhe.120h>, as user <pdebartol> in cluster <euler> at Tue Sep  6 22:14:24 2022
+</cluster/home/pdebartol> was used as the home directory.
+</cluster/home/pdebartol/convex_adversarial/examples> was used as the working directory.
+Started at Tue Sep  6 22:14:24 2022
+Terminated at Wed Sep  7 07:49:26 2022
+Results reported at Wed Sep  7 07:49:26 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python cifar.py --epsilon 0.28235294117 --model resnet --resnet_N 1 --resnet_factor 1 --epochs 60 --starting_epsilon=0.001 --verbose 200 --prefix tmp/cifar --cascade 1 --norm_test l2_normal --norm_train l2_normal --proj 50
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   34520.35 sec.
+    Max Memory :                                 1810 MB
+    Average Memory :                             1762.47 MB
+    Total Requested Memory :                     16000.00 MB
+    Delta Memory :                               14190.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                9
+    Run time :                                   34501 sec.
+    Turnaround time :                            44215 sec.
+
+The output (if any) follows:
+
+THCudaCheck FAIL file=/opt/conda/conda-bld/pytorch_1535490206202/work/aten/src/THC/THCGeneral.cpp line=663 error=11 : invalid argument
+/cluster/home/pdebartol/miniconda3/envs/wong/lib/python3.5/site-packages/torch/nn/functional.py:52: UserWarning: size_average and reduce args will be deprecated, please use reduction='elementwise_mean' instead.
+  warnings.warn(warning.format(ret))
+saving file to tmp/cifar_resnet_batch_size_50_epochs_60_epsilon_0.28235294117_lr_0.05_norm_test_l2_normal_norm_train_l2_normal_opt_sgd_proj_50_schedule_length_20_seed_0_starting_epsilon_0.001
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch: [0][0/1000]	Time 1.612 (1.612)	Data 0.014 (0.014)	Robust loss 2.3056 (2.3056)	Robust error 0.880 (0.880)	Loss 2.3054 (2.3054)	Error 0.880 (0.880)
+Epoch: [0][200/1000]	Time 1.568 (1.562)	Data 0.009 (0.010)	Robust loss 1.6707 (1.9644)	Robust error 0.680 (0.726)	Loss 1.6703 (1.9642)	Error 0.680 (0.726)
+Epoch: [0][400/1000]	Time 1.570 (1.564)	Data 0.012 (0.010)	Robust loss 1.6370 (1.8401)	Robust error 0.600 (0.680)	Loss 1.6366 (1.8397)	Error 0.600 (0.680)
+Epoch: [0][600/1000]	Time 1.570 (1.564)	Data 0.012 (0.009)	Robust loss 1.5921 (1.7672)	Robust error 0.580 (0.654)	Loss 1.5916 (1.7668)	Error 0.580 (0.654)
+Epoch: [0][800/1000]	Time 1.565 (1.565)	Data 0.008 (0.010)	Robust loss 1.2681 (1.7125)	Robust error 0.500 (0.635)	Loss 1.2676 (1.7121)	Error 0.500 (0.635)
+
+Epoch: [1][0/1000]	Time 1.655 (1.655)	Data 0.020 (0.020)	Robust loss 92.6387 (92.6387)	Robust error 1.000 (1.000)	Loss 1.3001 (1.3001)	Error 0.460 (0.460)
+Epoch: [1][200/1000]	Time 1.582 (1.584)	Data 0.009 (0.010)	Robust loss 1.3735 (4.9877)	Robust error 0.500 (0.646)	Loss 1.2923 (1.6191)	Error 0.460 (0.585)
+Epoch: [1][400/1000]	Time 1.579 (1.582)	Data 0.009 (0.010)	Robust loss 1.5992 (3.2638)	Robust error 0.620 (0.607)	Loss 1.5288 (1.5394)	Error 0.600 (0.562)
+Epoch: [1][600/1000]	Time 1.586 (1.581)	Data 0.012 (0.010)	Robust loss 1.5387 (2.6818)	Robust error 0.560 (0.590)	Loss 1.4574 (1.5097)	Error 0.480 (0.550)
+Epoch: [1][800/1000]	Time 1.580 (1.581)	Data 0.009 (0.010)	Robust loss 1.5906 (2.3770)	Robust error 0.620 (0.576)	Loss 1.5194 (1.4811)	Error 0.580 (0.539)
+
+Epoch: [2][0/1000]	Time 1.616 (1.616)	Data 0.010 (0.010)	Robust loss 1.8107 (1.8107)	Robust error 0.700 (0.700)	Loss 1.3076 (1.3076)	Error 0.340 (0.340)
+Epoch: [2][200/1000]	Time 1.584 (1.581)	Data 0.009 (0.009)	Robust loss 1.6921 (1.5467)	Robust error 0.560 (0.566)	Loss 1.5506 (1.4109)	Error 0.500 (0.509)
+Epoch: [2][400/1000]	Time 1.583 (1.581)	Data 0.011 (0.010)	Robust loss 1.6567 (1.5151)	Robust error 0.540 (0.552)	Loss 1.5532 (1.3901)	Error 0.480 (0.501)
+Epoch: [2][600/1000]	Time 1.579 (1.581)	Data 0.009 (0.010)	Robust loss 1.5345 (1.4983)	Robust error 0.540 (0.546)	Loss 1.4309 (1.3779)	Error 0.480 (0.497)
+Epoch: [2][800/1000]	Time 1.584 (1.581)	Data 0.009 (0.010)	Robust loss 1.3667 (1.4867)	Robust error 0.440 (0.542)	Loss 1.2568 (1.3691)	Error 0.380 (0.494)
+
+Epoch: [3][0/1000]	Time 1.617 (1.617)	Data 0.015 (0.015)	Robust loss 1.7083 (1.7083)	Robust error 0.660 (0.660)	Loss 1.3924 (1.3924)	Error 0.600 (0.600)
+Epoch: [3][200/1000]	Time 1.582 (1.581)	Data 0.009 (0.009)	Robust loss 1.9925 (1.5424)	Robust error 0.640 (0.568)	Loss 1.8143 (1.3905)	Error 0.520 (0.503)
+Epoch: [3][400/1000]	Time 1.581 (1.581)	Data 0.009 (0.010)	Robust loss 1.5834 (1.5327)	Robust error 0.500 (0.561)	Loss 1.4649 (1.3871)	Error 0.440 (0.500)
+Epoch: [3][600/1000]	Time 1.581 (1.581)	Data 0.009 (0.010)	Robust loss 1.3589 (1.5153)	Robust error 0.460 (0.553)	Loss 1.2385 (1.3736)	Error 0.420 (0.494)
+Epoch: [3][800/1000]	Time 1.584 (1.581)	Data 0.011 (0.010)	Robust loss 1.2985 (1.5042)	Robust error 0.520 (0.551)	Loss 1.1604 (1.3635)	Error 0.460 (0.491)
+
+Epoch: [4][0/1000]	Time 1.616 (1.616)	Data 0.015 (0.015)	Robust loss 1.5519 (1.5519)	Robust error 0.560 (0.560)	Loss 1.3369 (1.3369)	Error 0.500 (0.500)
+Epoch: [4][200/1000]	Time 1.584 (1.584)	Data 0.011 (0.010)	Robust loss 1.7116 (1.5543)	Robust error 0.600 (0.568)	Loss 1.5708 (1.3866)	Error 0.580 (0.498)
+Epoch: [4][400/1000]	Time 1.584 (1.584)	Data 0.009 (0.011)	Robust loss 1.6721 (1.5511)	Robust error 0.640 (0.568)	Loss 1.5077 (1.3884)	Error 0.540 (0.498)
+Epoch: [4][600/1000]	Time 1.582 (1.584)	Data 0.009 (0.011)	Robust loss 1.3688 (1.5476)	Robust error 0.460 (0.566)	Loss 1.2205 (1.3880)	Error 0.380 (0.498)
+Epoch: [4][800/1000]	Time 1.582 (1.583)	Data 0.009 (0.010)	Robust loss 1.5069 (1.5435)	Robust error 0.560 (0.563)	Loss 1.3715 (1.3854)	Error 0.500 (0.496)
+
+Epoch: [5][0/1000]	Time 1.616 (1.616)	Data 0.015 (0.015)	Robust loss 1.4155 (1.4155)	Robust error 0.580 (0.580)	Loss 1.1713 (1.1713)	Error 0.400 (0.400)
+Epoch: [5][200/1000]	Time 1.580 (1.581)	Data 0.008 (0.010)	Robust loss 1.5708 (1.5971)	Robust error 0.600 (0.590)	Loss 1.4199 (1.4177)	Error 0.540 (0.511)
+Epoch: [5][400/1000]	Time 1.585 (1.582)	Data 0.009 (0.010)	Robust loss 1.4834 (1.5917)	Robust error 0.560 (0.587)	Loss 1.3064 (1.4143)	Error 0.460 (0.510)
+Epoch: [5][600/1000]	Time 1.582 (1.581)	Data 0.009 (0.010)	Robust loss 1.5172 (1.5817)	Robust error 0.460 (0.582)	Loss 1.3126 (1.4082)	Error 0.420 (0.509)
+Epoch: [5][800/1000]	Time 1.580 (1.582)	Data 0.009 (0.010)	Robust loss 1.7440 (1.5779)	Robust error 0.580 (0.579)	Loss 1.5802 (1.4061)	Error 0.500 (0.506)
+
+Epoch: [6][0/1000]	Time 1.626 (1.626)	Data 0.021 (0.021)	Robust loss 1.5974 (1.5974)	Robust error 0.600 (0.600)	Loss 1.3402 (1.3402)	Error 0.480 (0.480)
+Epoch: [6][200/1000]	Time 1.584 (1.583)	Data 0.009 (0.010)	Robust loss 1.6333 (1.6200)	Robust error 0.680 (0.593)	Loss 1.4198 (1.4285)	Error 0.580 (0.515)
+Epoch: [6][400/1000]	Time 1.581 (1.582)	Data 0.009 (0.009)	Robust loss 1.6996 (1.6154)	Robust error 0.600 (0.593)	Loss 1.5288 (1.4266)	Error 0.520 (0.513)
+Epoch: [6][600/1000]	Time 1.584 (1.582)	Data 0.009 (0.010)	Robust loss 1.6260 (1.6166)	Robust error 0.620 (0.593)	Loss 1.4289 (1.4298)	Error 0.560 (0.514)
+Epoch: [6][800/1000]	Time 1.583 (1.582)	Data 0.009 (0.009)	Robust loss 1.7698 (1.6214)	Robust error 0.660 (0.595)	Loss 1.5960 (1.4356)	Error 0.580 (0.516)
+
+Epoch: [7][0/1000]	Time 1.615 (1.615)	Data 0.017 (0.017)	Robust loss 1.7762 (1.7762)	Robust error 0.520 (0.520)	Loss 1.5686 (1.5686)	Error 0.460 (0.460)
+Epoch: [7][200/1000]	Time 1.583 (1.583)	Data 0.010 (0.010)	Robust loss 1.5526 (1.6365)	Robust error 0.600 (0.601)	Loss 1.3378 (1.4322)	Error 0.480 (0.512)
+Epoch: [7][400/1000]	Time 1.583 (1.582)	Data 0.009 (0.010)	Robust loss 1.8395 (1.6500)	Robust error 0.660 (0.605)	Loss 1.6109 (1.4491)	Error 0.520 (0.519)
+Epoch: [7][600/1000]	Time 1.582 (1.582)	Data 0.009 (0.010)	Robust loss 1.7256 (1.6564)	Robust error 0.620 (0.605)	Loss 1.5105 (1.4588)	Error 0.520 (0.522)
+Epoch: [7][800/1000]	Time 1.581 (1.582)	Data 0.009 (0.010)	Robust loss 1.6770 (1.6547)	Robust error 0.620 (0.606)	Loss 1.5082 (1.4589)	Error 0.560 (0.522)
+
+Epoch: [8][0/1000]	Time 1.622 (1.622)	Data 0.018 (0.018)	Robust loss 1.6746 (1.6746)	Robust error 0.560 (0.560)	Loss 1.3985 (1.3985)	Error 0.500 (0.500)
+Epoch: [8][200/1000]	Time 1.583 (1.582)	Data 0.009 (0.010)	Robust loss 1.7936 (1.7044)	Robust error 0.660 (0.616)	Loss 1.5379 (1.4895)	Error 0.580 (0.529)
+Epoch: [8][400/1000]	Time 1.580 (1.582)	Data 0.009 (0.010)	Robust loss 1.8168 (1.7075)	Robust error 0.600 (0.620)	Loss 1.6557 (1.5003)	Error 0.480 (0.533)
+Epoch: [8][600/1000]	Time 1.583 (1.582)	Data 0.009 (0.009)	Robust loss 1.7416 (1.7011)	Robust error 0.580 (0.618)	Loss 1.5689 (1.4956)	Error 0.520 (0.530)
+Epoch: [8][800/1000]	Time 1.583 (1.582)	Data 0.009 (0.010)	Robust loss 1.5454 (1.7028)	Robust error 0.620 (0.621)	Loss 1.3809 (1.5000)	Error 0.480 (0.535)
+
+Epoch: [9][0/1000]	Time 1.616 (1.616)	Data 0.016 (0.016)	Robust loss 1.5243 (1.5243)	Robust error 0.440 (0.440)	Loss 1.2956 (1.2956)	Error 0.440 (0.440)
+Epoch: [9][200/1000]	Time 1.583 (1.583)	Data 0.009 (0.009)	Robust loss 1.8452 (1.7486)	Robust error 0.640 (0.643)	Loss 1.6057 (1.5274)	Error 0.580 (0.551)
+Epoch: [9][400/1000]	Time 1.588 (1.583)	Data 0.011 (0.010)	Robust loss 1.8172 (1.7489)	Robust error 0.640 (0.642)	Loss 1.6047 (1.5347)	Error 0.540 (0.551)
+Epoch: [9][600/1000]	Time 1.580 (1.582)	Data 0.008 (0.010)	Robust loss 1.8290 (1.7458)	Robust error 0.720 (0.641)	Loss 1.6512 (1.5346)	Error 0.580 (0.550)
+Epoch: [9][800/1000]	Time 1.585 (1.582)	Data 0.009 (0.010)	Robust loss 1.9997 (1.7453)	Robust error 0.760 (0.641)	Loss 1.7282 (1.5353)	Error 0.620 (0.551)
+
+Epoch: [10][0/1000]	Time 1.614 (1.614)	Data 0.017 (0.017)	Robust loss 1.8491 (1.8491)	Robust error 0.780 (0.780)	Loss 1.5792 (1.5792)	Error 0.640 (0.640)
+Epoch: [10][200/1000]	Time 1.589 (1.581)	Data 0.009 (0.009)	Robust loss 1.6871 (1.7855)	Robust error 0.660 (0.651)	Loss 1.4164 (1.5682)	Error 0.560 (0.555)
+Epoch: [10][400/1000]	Time 1.581 (1.582)	Data 0.008 (0.010)	Robust loss 1.8030 (1.7915)	Robust error 0.740 (0.654)	Loss 1.5927 (1.5763)	Error 0.660 (0.560)
+Epoch: [10][600/1000]	Time 1.581 (1.582)	Data 0.009 (0.010)	Robust loss 1.7231 (1.7895)	Robust error 0.640 (0.652)	Loss 1.5216 (1.5766)	Error 0.520 (0.560)
+Epoch: [10][800/1000]	Time 1.580 (1.582)	Data 0.009 (0.010)	Robust loss 1.8294 (1.7853)	Robust error 0.620 (0.652)	Loss 1.6102 (1.5743)	Error 0.480 (0.561)
+
+Epoch: [11][0/1000]	Time 1.610 (1.610)	Data 0.017 (0.017)	Robust loss 1.8731 (1.8731)	Robust error 0.680 (0.680)	Loss 1.6529 (1.6529)	Error 0.640 (0.640)
+Epoch: [11][200/1000]	Time 1.579 (1.581)	Data 0.009 (0.010)	Robust loss 1.8984 (1.8228)	Robust error 0.620 (0.673)	Loss 1.6928 (1.6081)	Error 0.600 (0.583)
+Epoch: [11][400/1000]	Time 1.584 (1.581)	Data 0.012 (0.010)	Robust loss 1.8952 (1.8149)	Robust error 0.700 (0.668)	Loss 1.6430 (1.6046)	Error 0.540 (0.577)
+Epoch: [11][600/1000]	Time 1.584 (1.581)	Data 0.013 (0.010)	Robust loss 1.9815 (1.8266)	Robust error 0.700 (0.670)	Loss 1.8464 (1.6205)	Error 0.680 (0.582)
+Epoch: [11][800/1000]	Time 1.580 (1.581)	Data 0.009 (0.010)	Robust loss 1.9732 (1.8364)	Robust error 0.720 (0.673)	Loss 1.7292 (1.6316)	Error 0.660 (0.584)
+
+Epoch: [12][0/1000]	Time 1.614 (1.614)	Data 0.017 (0.017)	Robust loss 2.1805 (2.1805)	Robust error 0.780 (0.780)	Loss 1.8906 (1.8906)	Error 0.640 (0.640)
+Epoch: [12][200/1000]	Time 1.578 (1.578)	Data 0.009 (0.009)	Robust loss 1.7976 (1.8674)	Robust error 0.680 (0.682)	Loss 1.6144 (1.6629)	Error 0.560 (0.592)
+Epoch: [12][400/1000]	Time 1.579 (1.579)	Data 0.008 (0.010)	Robust loss 1.8919 (1.8671)	Robust error 0.740 (0.687)	Loss 1.6651 (1.6626)	Error 0.620 (0.597)
+Epoch: [12][600/1000]	Time 1.594 (1.578)	Data 0.009 (0.009)	Robust loss 1.9555 (1.8694)	Robust error 0.780 (0.686)	Loss 1.6940 (1.6657)	Error 0.660 (0.597)
+Epoch: [12][800/1000]	Time 1.577 (1.578)	Data 0.008 (0.009)	Robust loss 1.9280 (1.8679)	Robust error 0.700 (0.685)	Loss 1.6931 (1.6670)	Error 0.600 (0.599)
+
+Epoch: [13][0/1000]	Time 1.617 (1.617)	Data 0.019 (0.019)	Robust loss 2.3243 (2.3243)	Robust error 0.840 (0.840)	Loss 2.0038 (2.0038)	Error 0.800 (0.800)
+Epoch: [13][200/1000]	Time 1.578 (1.579)	Data 0.009 (0.010)	Robust loss 1.8367 (1.8966)	Robust error 0.580 (0.691)	Loss 1.6521 (1.6883)	Error 0.560 (0.600)
+Epoch: [13][400/1000]	Time 1.574 (1.578)	Data 0.008 (0.009)	Robust loss 1.7689 (1.8966)	Robust error 0.600 (0.696)	Loss 1.5892 (1.6921)	Error 0.540 (0.605)
+Epoch: [13][600/1000]	Time 1.574 (1.578)	Data 0.009 (0.010)	Robust loss 1.7826 (1.8986)	Robust error 0.640 (0.697)	Loss 1.6514 (1.6965)	Error 0.580 (0.608)
+Epoch: [13][800/1000]	Time 1.578 (1.578)	Data 0.009 (0.009)	Robust loss 2.0033 (1.9034)	Robust error 0.720 (0.698)	Loss 1.7596 (1.7027)	Error 0.540 (0.609)
+
+Epoch: [14][0/1000]	Time 1.607 (1.607)	Data 0.012 (0.012)	Robust loss 1.8306 (1.8306)	Robust error 0.680 (0.680)	Loss 1.5966 (1.5966)	Error 0.600 (0.600)
+Epoch: [14][200/1000]	Time 1.577 (1.577)	Data 0.009 (0.010)	Robust loss 1.8877 (1.9224)	Robust error 0.680 (0.707)	Loss 1.6903 (1.7209)	Error 0.560 (0.618)
+Epoch: [14][400/1000]	Time 1.573 (1.577)	Data 0.009 (0.010)	Robust loss 1.8527 (1.9196)	Robust error 0.700 (0.705)	Loss 1.6846 (1.7195)	Error 0.620 (0.616)
+Epoch: [14][600/1000]	Time 1.582 (1.577)	Data 0.009 (0.010)	Robust loss 2.2433 (1.9235)	Robust error 0.720 (0.706)	Loss 1.9307 (1.7252)	Error 0.640 (0.617)
+Epoch: [14][800/1000]	Time 1.577 (1.577)	Data 0.011 (0.010)	Robust loss 1.9691 (1.9265)	Robust error 0.740 (0.708)	Loss 1.7646 (1.7295)	Error 0.620 (0.619)
+
+Epoch: [15][0/1000]	Time 1.603 (1.603)	Data 0.014 (0.014)	Robust loss 2.0540 (2.0540)	Robust error 0.800 (0.800)	Loss 1.8815 (1.8815)	Error 0.620 (0.620)
+Epoch: [15][200/1000]	Time 1.571 (1.576)	Data 0.009 (0.010)	Robust loss 1.8495 (1.9609)	Robust error 0.620 (0.719)	Loss 1.6870 (1.7650)	Error 0.580 (0.630)
+Epoch: [15][400/1000]	Time 1.575 (1.575)	Data 0.008 (0.010)	Robust loss 1.8785 (1.9620)	Robust error 0.700 (0.721)	Loss 1.7191 (1.7667)	Error 0.620 (0.632)
+Epoch: [15][600/1000]	Time 1.576 (1.576)	Data 0.009 (0.010)	Robust loss 1.8544 (1.9579)	Robust error 0.640 (0.720)	Loss 1.6406 (1.7652)	Error 0.560 (0.632)
+Epoch: [15][800/1000]	Time 1.580 (1.577)	Data 0.013 (0.010)	Robust loss 2.0198 (1.9549)	Robust error 0.720 (0.719)	Loss 1.8440 (1.7617)	Error 0.680 (0.631)
+
+Epoch: [16][0/1000]	Time 1.606 (1.606)	Data 0.015 (0.015)	Robust loss 2.1491 (2.1491)	Robust error 0.840 (0.840)	Loss 1.8918 (1.8918)	Error 0.700 (0.700)
+Epoch: [16][200/1000]	Time 1.580 (1.580)	Data 0.013 (0.011)	Robust loss 1.8567 (1.9847)	Robust error 0.660 (0.733)	Loss 1.6764 (1.7966)	Error 0.640 (0.644)
+Epoch: [16][400/1000]	Time 1.576 (1.578)	Data 0.009 (0.011)	Robust loss 1.6879 (1.9843)	Robust error 0.600 (0.734)	Loss 1.5054 (1.7957)	Error 0.480 (0.643)
+Epoch: [16][600/1000]	Time 1.574 (1.575)	Data 0.009 (0.010)	Robust loss 2.1252 (1.9895)	Robust error 0.760 (0.733)	Loss 1.9731 (1.8028)	Error 0.660 (0.645)
+Epoch: [16][800/1000]	Time 1.580 (1.575)	Data 0.013 (0.010)	Robust loss 2.0380 (1.9923)	Robust error 0.740 (0.734)	Loss 1.8579 (1.8061)	Error 0.640 (0.646)
+
+Epoch: [17][0/1000]	Time 1.620 (1.620)	Data 0.017 (0.017)	Robust loss 1.8807 (1.8807)	Robust error 0.640 (0.640)	Loss 1.7083 (1.7083)	Error 0.540 (0.540)
+Epoch: [17][200/1000]	Time 1.581 (1.575)	Data 0.014 (0.010)	Robust loss 1.8109 (1.9937)	Robust error 0.680 (0.732)	Loss 1.6069 (1.8004)	Error 0.540 (0.643)
+Epoch: [17][400/1000]	Time 1.578 (1.575)	Data 0.013 (0.010)	Robust loss 1.8740 (1.9925)	Robust error 0.660 (0.735)	Loss 1.6679 (1.8026)	Error 0.600 (0.647)
+Epoch: [17][600/1000]	Time 1.577 (1.575)	Data 0.009 (0.010)	Robust loss 2.0183 (1.9994)	Robust error 0.820 (0.737)	Loss 1.9073 (1.8125)	Error 0.780 (0.650)
+Epoch: [17][800/1000]	Time 1.574 (1.574)	Data 0.009 (0.010)	Robust loss 1.8819 (2.0098)	Robust error 0.680 (0.740)	Loss 1.7098 (1.8259)	Error 0.620 (0.654)
+
+Epoch: [18][0/1000]	Time 1.598 (1.598)	Data 0.014 (0.014)	Robust loss 1.8204 (1.8204)	Robust error 0.740 (0.740)	Loss 1.6351 (1.6351)	Error 0.600 (0.600)
+Epoch: [18][200/1000]	Time 1.574 (1.564)	Data 0.010 (0.010)	Robust loss 2.0675 (2.0086)	Robust error 0.640 (0.741)	Loss 1.9041 (1.8205)	Error 0.600 (0.659)
+Epoch: [18][400/1000]	Time 1.574 (1.567)	Data 0.011 (0.010)	Robust loss 2.1119 (2.0135)	Robust error 0.740 (0.740)	Loss 1.9294 (1.8258)	Error 0.700 (0.656)
+Epoch: [18][600/1000]	Time 1.574 (1.559)	Data 0.010 (0.010)	Robust loss 2.0617 (2.0225)	Robust error 0.680 (0.745)	Loss 1.8783 (1.8347)	Error 0.660 (0.660)
+Epoch: [18][800/1000]	Time 1.569 (1.549)	Data 0.008 (0.010)	Robust loss 1.9845 (2.0235)	Robust error 0.640 (0.746)	Loss 1.8152 (1.8363)	Error 0.560 (0.661)
+
+Epoch: [19][0/1000]	Time 1.603 (1.603)	Data 0.016 (0.016)	Robust loss 2.1129 (2.1129)	Robust error 0.800 (0.800)	Loss 1.9007 (1.9007)	Error 0.620 (0.620)
+Epoch: [19][200/1000]	Time 1.568 (1.570)	Data 0.009 (0.009)	Robust loss 1.9883 (2.0549)	Robust error 0.780 (0.762)	Loss 1.8575 (1.8712)	Error 0.680 (0.673)
+Epoch: [19][400/1000]	Time 1.577 (1.571)	Data 0.008 (0.009)	Robust loss 1.8633 (2.0586)	Robust error 0.620 (0.760)	Loss 1.6787 (1.8759)	Error 0.520 (0.673)
+Epoch: [19][600/1000]	Time 1.571 (1.556)	Data 0.009 (0.009)	Robust loss 2.0493 (2.0610)	Robust error 0.740 (0.762)	Loss 1.9183 (1.8795)	Error 0.680 (0.675)
+Epoch: [19][800/1000]	Time 1.579 (1.549)	Data 0.014 (0.009)	Robust loss 2.0132 (2.0573)	Robust error 0.740 (0.761)	Loss 1.8541 (1.8767)	Error 0.660 (0.674)
+
+Epoch: [20][0/1000]	Time 1.613 (1.613)	Data 0.019 (0.019)	Robust loss 1.9585 (1.9585)	Robust error 0.760 (0.760)	Loss 1.7701 (1.7701)	Error 0.620 (0.620)
+Epoch: [20][200/1000]	Time 1.416 (1.541)	Data 0.009 (0.011)	Robust loss 1.7649 (2.0387)	Robust error 0.620 (0.745)	Loss 1.6013 (1.8566)	Error 0.580 (0.659)
+Epoch: [20][400/1000]	Time 1.416 (1.543)	Data 0.013 (0.010)	Robust loss 2.0233 (2.0379)	Robust error 0.800 (0.748)	Loss 1.8554 (1.8542)	Error 0.640 (0.661)
+Epoch: [20][600/1000]	Time 1.579 (1.532)	Data 0.009 (0.010)	Robust loss 2.0816 (2.0390)	Robust error 0.740 (0.751)	Loss 1.8282 (1.8577)	Error 0.620 (0.665)
+Epoch: [20][800/1000]	Time 1.569 (1.535)	Data 0.008 (0.010)	Robust loss 2.0788 (2.0492)	Robust error 0.800 (0.754)	Loss 1.8821 (1.8709)	Error 0.680 (0.668)
+
+Epoch: [21][0/1000]	Time 1.605 (1.605)	Data 0.016 (0.016)	Robust loss 2.1269 (2.1269)	Robust error 0.800 (0.800)	Loss 1.9112 (1.9112)	Error 0.680 (0.680)
+Epoch: [21][200/1000]	Time 1.573 (1.520)	Data 0.009 (0.009)	Robust loss 1.9021 (2.0714)	Robust error 0.600 (0.762)	Loss 1.7722 (1.8947)	Error 0.560 (0.678)
+Epoch: [21][400/1000]	Time 1.574 (1.518)	Data 0.009 (0.010)	Robust loss 1.9213 (2.0564)	Robust error 0.700 (0.759)	Loss 1.7628 (1.8795)	Error 0.660 (0.674)
+Epoch: [21][600/1000]	Time 1.572 (1.522)	Data 0.013 (0.009)	Robust loss 2.0959 (2.0681)	Robust error 0.740 (0.761)	Loss 1.9227 (1.8935)	Error 0.680 (0.678)
+Epoch: [21][800/1000]	Time 1.581 (1.531)	Data 0.008 (0.009)	Robust loss 1.9341 (2.0649)	Robust error 0.700 (0.761)	Loss 1.7469 (1.8899)	Error 0.660 (0.678)
+Traceback (most recent call last):
+  File "cifar.py", line 128, in <module>
+    **kwargs)
+  File "/cluster/home/pdebartol/convex_adversarial/examples/trainer.py", line 44, in train_robust
+    robust_ce.backward()
+  File "/cluster/home/pdebartol/miniconda3/envs/wong/lib/python3.5/site-packages/torch/tensor.py", line 93, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/cluster/home/pdebartol/miniconda3/envs/wong/lib/python3.5/site-packages/torch/autograd/__init__.py", line 90, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: merge_sort: failed to synchronize: an illegal memory access was encountered

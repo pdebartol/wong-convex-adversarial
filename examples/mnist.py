@@ -35,10 +35,13 @@ def select_model(m):
         model = pblm.mnist_model_deep(args.model_factor).cuda()
     elif m == '500': 
         model = pblm.mnist_500().cuda()
+    elif m == 'pgd_pretrained':
+        model = pblm.mnist_model().cuda() 
+        ckpt = torch.load(f'/cluster/home/pdebartol/convex_adversarial/examples/models/mnist_pgd_pretrained_best_epsilon_1.5_std0.pth')['net']
+        model.load_state_dict(ckpt)
     else: 
         model = pblm.mnist_model().cuda() 
     return model
-
 
 if __name__ == "__main__": 
     args = pblm.argparser(opt='adam', verbose=200, starting_epsilon=0.01)

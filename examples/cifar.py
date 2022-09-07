@@ -9,7 +9,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torch.autograd import Variable
 import torch.backends.cudnn as cudnn
-cudnn.benchmark = True
+cudnn.benchmark = False
 
 import torchvision.transforms as transforms
 import torchvision.datasets as datasets
@@ -23,12 +23,13 @@ from trainer import *
 import math
 import numpy
 
+
 def select_model(m): 
     if m == 'large': 
         # raise ValueError
         model = pblm.cifar_model_large().cuda()
     elif m == 'resnet': 
-        model = pblm.cifar_model_resnet(N=args.resnet_N, factor=args.resnet_factor).cuda()
+       model = pblm.cifar_model_resnet(N=args.resnet_N, factor=args.resnet_factor).cuda()
     else: 
         model = pblm.cifar_model().cuda() 
     return model
@@ -37,12 +38,12 @@ if __name__ == "__main__":
     args = pblm.argparser(epsilon = 0.0347, starting_epsilon=0.001, batch_size = 50, 
                 opt='sgd', lr=0.05)
 
+    args.epsilon /= 0.225 # since they normalize in the train loader
     print("saving file to {}".format(args.prefix))
     setproctitle.setproctitle(args.prefix)
 
     train_log = open(args.prefix + "_train.log", "w")
     test_log = open(args.prefix + "_test.log", "w")
-
     train_loader, _ = pblm.cifar_loaders(args.batch_size)
     _, test_loader = pblm.cifar_loaders(args.test_batch_size)
 
@@ -125,23 +126,23 @@ if __name__ == "__main__":
                    train_log, args.verbose, args.real_time,
                    norm_type=args.norm_train, bounded_input=False, clip_grad=1,
                    **kwargs)
-                err = evaluate_robust(test_loader, model[0], args.epsilon, t,
-                   test_log, args.verbose, args.real_time,
-                   norm_type=args.norm_test, bounded_input=False, 
-                   **kwargs)
+              #  err = evaluate_robust(test_loader, model[0], args.epsilon, t,
+                #   test_log, args.verbose, args.real_time,
+                #   norm_type=args.norm_test, bounded_input=False, 
+                #   **kwargs)
             
-            if err < best_err: 
-                best_err = err
-                torch.save({
-                    'state_dict' : [m.state_dict() for m in model], 
-                    'err' : best_err,
-                    'epoch' : t,
-                    'sampler_indices' : sampler_indices
-                    }, args.prefix + "_best.pth")
+            #if err < best_err: 
+               # best_err = err
+              #  torch.save({
+                #    'state_dict' : [m.state_dict() for m in model], 
+                #    'err' : best_err,
+                #    'epoch' : t,
+                 #   'sampler_indices' : sampler_indices
+                 #   }, args.prefix + "_best.pth")
                 
             torch.save({ 
                 'state_dict': [m.state_dict() for m in model],
-                'err' : err,
+                #'err' : err,
                 'epoch' : t,
                 'sampler_indices' : sampler_indices
                 }, args.prefix + "_checkpoint.pth")

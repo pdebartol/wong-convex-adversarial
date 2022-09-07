@@ -211,7 +211,7 @@ def cifar_loaders(batch_size, shuffle_test=False):
             transforms.RandomHorizontalFlip(),
             transforms.RandomCrop(32, 4),
             transforms.ToTensor(),
-            normalize,
+            normalize
         ]))
     test = datasets.CIFAR10('./data', train=False, 
         transform=transforms.Compose([transforms.ToTensor(), normalize]))
@@ -264,7 +264,8 @@ def cifar_model_large():
             m.bias.data.zero_()
     return model
 
-def cifar_model_resnet(N = 5, factor=10): 
+def cifar_model_resnet(N =1, factor=1): 
+
     def  block(in_filters, out_filters, k, downsample): 
         if not downsample: 
             k_first = 3
@@ -314,11 +315,11 @@ def cifar_model_resnet(N = 5, factor=10):
                 m.bias.data.zero_()
     return model
 
-def argparser(batch_size=50, epochs=20, seed=0, verbose=1, lr=1e-3, 
-              epsilon=0.1, starting_epsilon=None, 
+def argparser(batch_size=50, epochs=60, seed=0, verbose=1, lr=1e-3, 
+              epsilon=0.1, starting_epsilon=0.01, 
               proj=None, 
-              norm_train='l1', norm_test='l1', 
-              opt='sgd', momentum=0.9, weight_decay=5e-4): 
+              norm_train='l2', norm_test='l2', 
+              opt='adam', momentum=0.9, weight_decay=5e-4): 
 
     parser = argparse.ArgumentParser()
 
@@ -334,7 +335,7 @@ def argparser(batch_size=50, epochs=20, seed=0, verbose=1, lr=1e-3,
     # epsilon settings
     parser.add_argument("--epsilon", type=float, default=epsilon)
     parser.add_argument("--starting_epsilon", type=float, default=starting_epsilon)
-    parser.add_argument('--schedule_length', type=int, default=10)
+    parser.add_argument('--schedule_length', type=int, default=20)
 
     # projection settings
     parser.add_argument('--proj', type=int, default=proj)
